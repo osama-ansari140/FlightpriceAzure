@@ -9,7 +9,7 @@ model = pickle.load(open('model.pkl','rb'))
 
 
 @app.route("/")
-def home():_
+def home():
     return render_template("FlightPrice.html")
 
 
