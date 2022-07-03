@@ -15,4 +15,5 @@ threadpoolctl==2.2.0
 Werkzeug==2.0.2
 xgboost==1.5.2
 uwsgi
+gunicorn==20.0.4
 
