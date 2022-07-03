@@ -1,1 +1,1 @@
-web: gunicorn app:FlightPriceApp
+web: gunicorn app:app
