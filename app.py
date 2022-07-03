@@ -17,7 +17,7 @@ def home():
 
 @app.route("/predict", methods = ["GET","POST"])
 def predict():
-        if rquest.method == "POST":
+    if request.method == "POST":
         # Date_of_Journey
         date_dep = request.form["Dep_Time"]
         Journey_day = int(pd.to_datetime(date_dep, format="%Y-%m-%dT%H:%M").day)
