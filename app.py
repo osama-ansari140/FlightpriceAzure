@@ -10,14 +10,13 @@ model = pickle.load(open('model.pkl','rb'))
 
 @app.route("/")
 def home():
-    return render_template("FlightPrice.html")
+    return render_template("index.html")
 
 
 
 
-@app.route("/predict", methods = ["GET", "POST"])
+@app.route("/predict", methods = ["POST"])
 def predict():
-    if request.method == "POST":
 
         # Date_of_Journey
         date_dep = request.form["Dep_Time"]
@@ -314,10 +313,10 @@ def predict():
 
         output=round(prediction[0],2)
 
-        return render_template('FlightPrice.html',prediction_text="Your Flight price is Rs. {}".format(output))
+        return render_template('index.html',prediction_text="Your Flight price is Rs. {}".format(output))
 
 
-    return render_template("FlightPrice.html")
+    ##return render_template("index.html")
 
 
 
