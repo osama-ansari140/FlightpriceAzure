@@ -5,7 +5,7 @@ import pickle
 import pandas as pd
 
 app = Flask(__name__)
-model = pickle.load(open('model.pkl','rb'))
+reg_rf = pickle.load(open('model.pkl','rb'))
 
 
 
@@ -283,7 +283,7 @@ def predict():
             d_Kolkata = 0
 
         
-        prediction=model.predict([[
+        prediction=reg_rf.predict([[
             Total_stops,
             Journey_day,
             Journey_month,
