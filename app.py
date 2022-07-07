@@ -5,9 +5,7 @@ import pickle
 import pandas as pd
 
 app = Flask(__name__)
-reg_rf = pickle.load(open('model.pkl','rb'))
-
-
+model = pickle.load(open("flight_rf.pkl", "rb"))
 
 @app.route("/")
 @cross_origin()
@@ -283,7 +281,7 @@ def predict():
             d_Kolkata = 0
 
         
-        prediction=reg_rf.predict([[
+        prediction=model.predict([[
             Total_stops,
             Journey_day,
             Journey_month,
