@@ -5,8 +5,7 @@ import pickle
 import pandas as pd
 
 app = Flask(__name__)
-filename = 'reg_rf.pkl'
-model = pickle.load(open(filename, 'rb'))
+model = pickle.load(open('reg_rf.pkl', 'rb'))
 
 
 
